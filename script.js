@@ -42,15 +42,11 @@ function calculate(){
     if(calcType === 'theory' && labInput.value !== ""){
         let labGrade = parseFloat(labInput.value);
         requiredGrade = (5 - (labGrade * lab_per)) / theory_per;
-
-        //document.getElementById("resultTxt").textContent = "Required Theory Grade: " + requiredTheory.toFixed(2);
     }
     // Calculate Lab Grade
     else if(calcType === "lab" && theoryInput.value !==""){
         let theoryGrade = parseFloat(theoryInput.value);
         requiredGrade = (5 - (theoryGrade * theory_per)) / lab_per;
-
-       // document.getElementById("resultTxt").textContent = "Required Lab Grade: " + requiredLab.toFixed(2);
     }
 
     if(requiredGrade>=0 && requiredGrade <= 10){
@@ -59,7 +55,7 @@ function calculate(){
     }
     else{
         resultText.textContent = "Abord Mission!";
-        resultText.style.color = "red";
+        resultText.style.color = "black";
     }
 
 }
