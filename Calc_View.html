@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device - width, initial-scale = 1.0">
+        <title>UniCalculator</title>
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "header">
+            <h1>Calculate your grade</h1>
+            
+                <p1>
+                    It is a calculator which allows you to calculate the grade you need to get in a course,
+                    based on the weighting percentages of the theoretical and laboratory parts of the course.
+                </p1>
+            
+        </div>
+        <br> 
+
+        <div class = "container">
+            <label for ="mode">Select Calculation: </label>
+            <select id = "mode" onchange = "updateMode()">
+                <option value="">Select</option>
+                <option value="theory">Calculate Theory Grade</option>
+                <option value ="lab">Calculate Lab Grade</option>
+            </select>
+
+            <br>
+
+            <label for = "theory_per">Theory (%): </label>
+            <input type = "number" id = "theory_per" min = "0" max = "100" placeholder="Enter %">
+
+            <label for = "lab_per">Lab (%): </label>
+            <input type = "number" id = "lab_per" min = "0" max = "100" placeholder = "Enter %">
+       
+            <br>
+        
+            <label for = "lab_grd">Lab Grade: </label>
+            <input type ="number" id = "lab_grd" min = "0" max = "10" oninput="calculate()" disabled>
+            
+            <br>
+        
+            <label for = "theory_grd">Theory Grade: </label>
+            <input type ="number" id = "theory_grd" min = "0" max ="10" oninput="calculate()" disabled>
+        
+            <br>
+        
+            <button onclick="calculate()">Calculate</button>
+
+            <div id = "result" class="result-box">
+                <p id="resultTxt"></p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
