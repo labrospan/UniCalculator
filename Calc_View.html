@@ -2,7 +2,7 @@
 <html lang= "en">
     <head>
         <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width = device - width, initial-scale = 1.0">
+        <!--<meta name = "viewport" content = "width = device - width, initial-scale = 1.0"> -->
         <title>UniCalculator</title>
         <link rel = "stylesheet" href="style.css">
     </head>
@@ -37,16 +37,16 @@
             <br>
         
             <label for = "lab_grd">Lab Grade: </label>
-            <input type ="number" id = "lab_grd" min = "0" max = "10" oninput="calculate()" disabled>
+            <input type ="number" id = "lab_grd" min = "0" max = "10"  disabled>
             
             <br>
         
             <label for = "theory_grd">Theory Grade: </label>
-            <input type ="number" id = "theory_grd" min = "0" max ="10" oninput="calculate()" disabled>
+            <input type ="number" id = "theory_grd" min = "0" max ="10"  disabled>
         
             <br>
         
-            <button onclick="calculate()">Calculate</button>
+            <button id ="calcBtn" onclick="calculate()">Calculate</button>
 
             <div id = "result" class="result-box">
                 <p id="resultTxt"></p>
