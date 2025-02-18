@@ -1,9 +1,10 @@
 body{
-    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-family: "Arial", Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: #252525;
-    margin: 0px;
-    padding: 300px;
+    margin: 40px;
+    margin-top: 300px;
+    
 }
 
 h1{
@@ -20,38 +21,148 @@ h1{
     margin-bottom: -150px;
 }
 
-.header p1{
-    font-size: 1.25em;
 
+.par{
+    font-size: 1.25em;
+    margin: 310px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .container{
     background-color: #fd6500;
-    border-radius: 8px;
-    width: 420px;
+    border-radius: 35px;
+    width: 400px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 50px;
     box-shadow: 150px 40px 12px rgb(34, 34, 34);
 }
 
+/*
 label{
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 0px;
     display: inline-block;
     color: #333;
 }
+*/
 
+/*
 input, select, button{
     margin-top: 10px;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.02em;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    width: 10%;
+    border-radius: 5.7px;
+    border: 2px solid #000000;
+    color: black;
+    margin-right:9px;
 }
+*/
 
 input:disabled{
     background-color: #c7c0c0;
+}
+
+/* removes the arrows on input bar */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+     margin: 0;
+}
+
+.selecttxt{
+    font-size: 30px;
+    color: black;
+    margin-left: 12px;
+}
+
+.selectbox{
+    padding: 7.8px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-top: 7px;
+    width: 100%;
+}
+
+.input_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*Align elements vertically*/
+    gap: 7px; /*Space between elements*/
+    margin-bottom: 12px; /*Space betweem rows*/
+    margin-top: -10px;
+    margin-left: 32px;
+    font-size: 1.08em;
+}
+
+.input_row label{
+    flex: 1; /*Equal width for labels*/
+    text-align: right;    
+    color: black;
+    block-size: 0.88cm;
+}
+
+.input_row input{  
+    flex: 2;
+    width: 100%;
+    font-size: 1.03em;
+    block-size: 0.4cm;
+    margin-right: 32px;
+}
+
+
+.theoryper{
+    margin-right:119px;
+    font-size: 1.2em;
+}
+
+.theoryperbox{
+    text-align: left;
+    margin-left: -120px;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 4px;
+}
+
+.labper{
+    font-size: 1.2em;
+    
+}
+
+.labperbox{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.grd_row{
+    display:inline-block;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.grd_row input{
+    block-size: 0.6cm;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.labgrd{
+    margin-left: 37.5px;
+    
+}
+
+.labgrdbox{
+    width:50%;
+    
+}
+
+.theorygrd{
+    margin-left: 10px;
+}
+.theorygrdbox{
+    width: 50%;
 }
 
 button{
@@ -59,6 +170,13 @@ button{
     color: white;
     border: none;
     cursor: pointer;
+    padding: 10px 20px;
+    width: 40%;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-size: 1.1em;
 }
 
 button:hover{
@@ -71,5 +189,28 @@ input[type="number"]{
 
 select{
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* Style the input container */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the percentage symbol */
+.input-container span {
+    position: absolute;
+    left: 10px;
+    font-size: 1em;
+    color: gray;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Style the input field */
+.input-container input {
+    padding-left: 25px; /* Space for % symbol */
+    text-align: left; /* Align text properly */
+    width: 100%;
 }
