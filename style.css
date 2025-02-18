@@ -38,27 +38,6 @@ h1{
     box-shadow: 150px 40px 12px rgb(34, 34, 34);
 }
 
-/*
-label{
-    font-size: 1.3em;
-    margin-top: 0px;
-    display: inline-block;
-    color: #333;
-}
-*/
-
-/*
-input, select, button{
-    margin-top: 10px;
-    padding: 5px;
-    font-size: 1.02em;
-    width: 10%;
-    border-radius: 5.7px;
-    border: 2px solid #000000;
-    color: black;
-    margin-right:9px;
-}
-*/
 
 input:disabled{
     background-color: #c7c0c0;
@@ -89,26 +68,25 @@ input[type="number"]::-webkit-outer-spin-button{
     display: flex;
     justify-content: space-between;
     align-items: center; /*Align elements vertically*/
-    gap: 7px; /*Space between elements*/
+    gap: 5px; /*Space between elements*/
     margin-bottom: 12px; /*Space betweem rows*/
     margin-top: -10px;
-    margin-left: 32px;
+    margin-left: 19px;
     font-size: 1.08em;
 }
 
 .input_row label{
     flex: 1; /*Equal width for labels*/
-    text-align: right;    
+    text-align: center;    
     color: black;
     block-size: 0.88cm;
 }
 
 .input_row input{  
     flex: 2;
-    width: 100%;
     font-size: 1.03em;
     block-size: 0.4cm;
-    margin-right: 32px;
+    margin-right: 30px;
 }
 
 
@@ -118,22 +96,23 @@ input[type="number"]::-webkit-outer-spin-button{
 }
 
 .theoryperbox{
-    text-align: left;
-    margin-left: -120px;
+    text-align: center;
+    margin-left: -115px;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     padding: 4px;
 }
 
 .labper{
     font-size: 1.2em;
-    
+    margin-right: 4px;
 }
 
 .labperbox{
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 4px;
+    text-align: center;
 }
 
 .grd_row{
@@ -195,22 +174,26 @@ select{
 /* Style the input container */
 .input-container {
     position: relative;
-    display: flex;
+    display: inline-flex; /* Keeps input and % in line*/
     align-items: center;
+    width: auto;
 }
 
 /* Style the percentage symbol */
 .input-container span {
     position: absolute;
-    left: 10px;
-    font-size: 1em;
-    color: gray;
+    right: 38px;
+    font-size: 1.05em;
+    color: rgb(0, 0, 0);
     pointer-events: none; /* Prevent interaction */
+    top: 40%; /* mOve the % to the middle*/
+    transform: translateY(-50%); /* Ensure perfect vertical aligment*/
 }
 
 /* Style the input field */
 .input-container input {
-    padding-left: 25px; /* Space for % symbol */
-    text-align: left; /* Align text properly */
-    width: 100%;
+    padding-right: 20px; /* Space for % symbol */
+    text-align: rifht; /* Align text properly */
+    width: 70px;
 }
+
