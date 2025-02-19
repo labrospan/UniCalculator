@@ -42,12 +42,12 @@ input, button, select{
     margin-bottom: 10px;
 
     /* Every screen*/
-    max-width: 90%;
+    max-width: 50%;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
     margin: 0 auto;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 
@@ -108,7 +108,7 @@ input[type="number"]::-webkit-outer-spin-button{
     font-size: 1.08em;
 
     /* Every screen */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
 }
 
@@ -164,6 +164,13 @@ input[type="number"]::-webkit-outer-spin-button{
     font-size: 0.9em;
     text-align: center;
     border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .labgrd{
@@ -172,15 +179,18 @@ input[type="number"]::-webkit-outer-spin-button{
 }
 
 .labgrdbox{
-    width:50%;
-    
+    width:80%;
+    max-width: 200px;
+    text-align: center;
 }
 
 .theorygrd{
     margin-left: 10px;
 }
 .theorygrdbox{
-    width: 50%;
+    width:80%;
+    max-width: 200px;
+    text-align: center;
 }
 
 
@@ -274,18 +284,52 @@ select{
 /* Style the input field */
 .input-container input {
     padding-right: 20px; /* Space for % symbol */
-    text-align: rifht; /* Align text properly */
-    width: 70px;
+    text-align: center; /* Align text properly */
+    width: 90px;
+    max-width: 100px;
+    padding: 10px;
 }
 
 
-@media screen and (max-width) {
+@media screen and (max-width: 600) {
     .button_row{
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
+
     .btn, .reset{
         width: 80%;
     }    
+
+    .input_row{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .input-container{
+        width: 70px;
+    }
+
+    .grd_row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .labgrdbox, .theorygrdbox{
+        width: 90%;
+    }
+
+    .labgrd, .theorygrd{
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .par{
+        max-width: 90%;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
 }
