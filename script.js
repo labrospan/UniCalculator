@@ -57,7 +57,6 @@ function calculate(){
         resultText.textContent = "Abord Mission!";
         resultText.style.color = "black";
     }
-
 }
 
 function reset(){
@@ -68,4 +67,35 @@ function reset(){
     document.getElementById("resultTxt").textContent = "Required Grade: ";
 
 }
+
+function debounce(func, delay){
+    let timeout;
+    return function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, arguments), delay);
+    };
+}
+
+document.getElementById("theory_per").addEventListener("input", debounce(function(){
+    let theoryValue = parseFloat(this.value);
+
+    if(!isNaN(theoryValue) && theoryValue>=0 && theoryValue <= 100){
+        document.getElementById("lab_per").value = (100-theoryValue);
+    }
+    else if (this.value.trim() === ""){
+        document.getElementById("lab_per").value = "";
+    }
+}, 200));
+
+document.getElementById("lab_per").addEventListener("input", debounce(function(){
+    let labValue = parseFloat(this.value);
+
+    if(!isNaN(labValue) && labValue >= 0 && labValue <=100){
+        document.getElementById("theory_per").value = (100-labValue);
+    }
+    else if (this.value.trim() === ""){
+        document.getElementById("theory_per").value = "";
+    }
+}, 200));
+
 

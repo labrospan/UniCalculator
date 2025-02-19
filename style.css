@@ -38,6 +38,12 @@ h1{
     padding: 40px;
     box-shadow: 150px 40px 12px rgb(34, 34, 34);
     border: 2.5px solid rgb(0, 0, 0);
+
+    /*Changes for every screen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
 }
 
 
@@ -65,6 +71,9 @@ input[type="number"]::-webkit-outer-spin-button{
     font-size: 17px;
     margin-top: 7px;
     width: 100%;
+
+    /* Changes every screen*/
+    max-width: 300px;
 }
 
 .input_row{
@@ -76,6 +85,9 @@ input[type="number"]::-webkit-outer-spin-button{
     margin-top: -10px;
     margin-left: 19px;
     font-size: 1.08em;
+
+    /* Every screen */
+    flex-wrap: wrap;
 }
 
 .input_row label{
@@ -175,13 +187,21 @@ button:hover{
 
 .reset{
     width: 15%;
-    border-radius:50%;
+    border-radius:43%;
     margin-left: 20px;
 }
 
 .reset:active {
     transform: rotate(180deg);
     transition: transform 0.1s ease-in-out;
+}
+
+/* Every screen*/
+.btn, .reset{
+    width: auto;
+    min-width: 80px;
+    padding: 10px 15px;
+    font-size: 1.1em;
 }
 
 input[type="number"]{
@@ -196,15 +216,21 @@ select{
 .result-box{
     font-size: 1.35em;
     
+    /*every screen*/
+    word-wrap: break-word;
+    text-align: center;
 }
 
 /*FOR THE % */
 /* Style the input container */
 .input-container {
     position: relative;
-    display: inline-flex; /* Keeps input and % in line*/
+    display: flex; /* Keeps input and % in line*/
     align-items: center;
-    width: auto;
+    width: 100%;
+
+    /*Every Screen*/
+    max-width: 180px;
 }
 
 /* Style the percentage symbol */
