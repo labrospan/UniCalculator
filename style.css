@@ -168,13 +168,18 @@ button:hover{
     background-color: #000000;
 }
 
+.btn:active{
+    transform: scale(1.05);
+    transition: transform 0.0.s ease-in-out
+}
+
 .reset{
     width: 15%;
     border-radius:50%;
     margin-left: 20px;
 }
 
-.reset.reset:active {
+.reset:active {
     transform: rotate(180deg);
     transition: transform 0.1s ease-in-out;
 }
