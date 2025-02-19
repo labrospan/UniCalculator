@@ -5,12 +5,26 @@ body{
     margin: 40px;
     margin-top: 300px;
     
+    /* Every screen*/
+    font-size: 1em;
 }
 
 h1{
-    font-size: 2.7em;
+    font-size: 2.7vm;
     color: #fd6500;
     margin-top: -300px;
+
+    /* every screen*/
+    text-align: center;
+}
+
+/* every screen */
+label{
+    font-size: 1.1em;
+}
+
+input, button, select{
+    font-size: 1em;
 }
 
 .header{
@@ -24,9 +38,16 @@ h1{
 
 .par{
     font-size: 1.25em;
-    margin: 310px;
     margin-top: 10px;
     margin-bottom: 10px;
+
+    /* Every screen*/
+    max-width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 
 
@@ -80,7 +101,7 @@ input[type="number"]::-webkit-outer-spin-button{
     display: flex;
     justify-content: space-between;
     align-items: center; /*Align elements vertically*/
-    gap: 5px; /*Space between elements*/
+    gap: 10px; /*Space between elements*/
     margin-bottom: 12px; /*Space betweem rows*/
     margin-top: -10px;
     margin-left: 19px;
@@ -88,6 +109,7 @@ input[type="number"]::-webkit-outer-spin-button{
 
     /* Every screen */
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .input_row label{
@@ -206,6 +228,11 @@ button:hover{
 
 input[type="number"]{
     margin-bottom: 10px;
+
+    /*every screen*/
+    width: 100%;
+    max-width: 150px;
+    box-sizing: border-box;
 }
 
 select{
@@ -251,3 +278,14 @@ select{
     width: 70px;
 }
 
+
+@media screen and (max-width) {
+    .button_row{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn, .reset{
+        width: 80%;
+    }    
+}
