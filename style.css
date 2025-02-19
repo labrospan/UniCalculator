@@ -2,17 +2,16 @@ body{
     font-family: "Arial", Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: #252525;
-    margin: 40px;
-    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
     
     /* Every screen*/
     font-size: 1em;
 }
 
 h1{
-    font-size: 2.7vm;
+    font-size: 3vmax;
     color: #fd6500;
-    margin-top: -300px;
 
     /* every screen*/
     text-align: center;
@@ -29,24 +28,21 @@ input, button, select{
 
 .header{
     background-color: #252525;
-    padding: 20px;
     color: white;
-    border-radius: 8px;
-    margin-bottom: -150px;
 }
 
 
 .par{
     font-size: 1.25em;
-    margin-top: 10px;
-    margin-bottom: 10px;
 
     /* Every screen*/
     max-width: 50%;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
-    margin: 0 auto;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.2;
 }
 
@@ -54,9 +50,11 @@ input, button, select{
 .container{
     background-color: #fd6500;
     border-radius: 20px;
-    width: 400px;
+    width: 30%;
     margin: 0 auto;
-    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
     box-shadow: 150px 40px 12px rgb(34, 34, 34);
     border: 2.5px solid rgb(0, 0, 0);
 
@@ -295,7 +293,7 @@ select{
     .button_row{
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap:   10px;
     }
 
     .btn, .reset{
@@ -331,5 +329,9 @@ select{
         max-width: 90%;
         font-size: 1em;
         margin-bottom: 15px;
+    }
+
+    .h1{
+        font-size: 1.2em;
     }
 }
