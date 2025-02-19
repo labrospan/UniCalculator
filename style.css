@@ -29,13 +29,15 @@ h1{
     margin-bottom: 10px;
 }
 
+
 .container{
     background-color: #fd6500;
-    border-radius: 35px;
+    border-radius: 20px;
     width: 400px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 40px;
     box-shadow: 150px 40px 12px rgb(34, 34, 34);
+    border: 2.5px solid rgb(0, 0, 0);
 }
 
 
@@ -59,6 +61,7 @@ input[type="number"]::-webkit-outer-spin-button{
 .selectbox{
     padding: 7.8px;
     border-radius: 10px;
+    border: 2px solid black;
     font-size: 17px;
     margin-top: 7px;
     width: 100%;
@@ -119,12 +122,14 @@ input[type="number"]::-webkit-outer-spin-button{
     display:inline-block;
     font-size: 1.2em;
     text-align: left;
+    
 }
 
 .grd_row input{
     block-size: 0.6cm;
     font-size: 0.9em;
     text-align: center;
+    border: 2px solid black;
 }
 
 .labgrd{
@@ -144,6 +149,7 @@ input[type="number"]::-webkit-outer-spin-button{
     width: 50%;
 }
 
+
 button{
     background-color: #332d2d;
     color: white;
@@ -162,6 +168,17 @@ button:hover{
     background-color: #000000;
 }
 
+.reset{
+    width: 15%;
+    border-radius:50%;
+    margin-left: 20px;
+}
+
+.reset.reset:active {
+    transform: rotate(180deg);
+    transition: transform 0.1s ease-in-out;
+}
+
 input[type="number"]{
     margin-bottom: 10px;
 }
@@ -171,6 +188,12 @@ select{
     margin-bottom: 30px;
 }
 
+.result-box{
+    font-size: 1.35em;
+    
+}
+
+/*FOR THE % */
 /* Style the input container */
 .input-container {
     position: relative;

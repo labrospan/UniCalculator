@@ -2,9 +2,11 @@
 <html lang= "en">
     <head>
         <meta charset = "UTF-8">
-        <!--<meta name = "viewport" content = "width = device - width, initial-scale = 1.0"> -->
+        <meta name = "viewport" content = "width = device - width, initial-scale = 1.0">
         <title>UniCalculator</title>
         <link rel = "stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="icon" type="image/png" href="logo4.webp">
     </head>
     <body>
         <div class = "header">
@@ -17,7 +19,7 @@
             
         </div>
         
-
+        <div class="mid">
         <div class = "container">
             <label class="selecttxt" for ="mode">Select Calculation</label>
             <select class="selectbox" id = "mode" onchange = "updateMode()">
@@ -36,7 +38,6 @@
 
                 <label class="labper" for = "lab_per">Lab: </label>
                 <div class="input-container">
-                    
                     <input class="labperbox" type = "number" id = "lab_per" min = "0" max = "100">
                     <span>%</span>
                 </div>
@@ -50,12 +51,17 @@
                 <input class="theorygrdbox" type ="number" id = "theory_grd" min = "0" max ="10"  disabled>
             </div>
             
-        
-            <button class="btn" id ="calcBtn" onclick="calculate()">Calculate</button>
+            <div class="button_row">
+                <button class="btn" id ="calcBtn" onclick="calculate()">Calculate</button>
+                <button class="reset" id="reset" onclick="reset()">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
 
             <div id = "result" class="result-box">
-                <p id="resultTxt"></p>
+                <p id="resultTxt">Required Grade:</p>
             </div>
+        </div>
         </div>
         <script src="script.js"></script>
     </body>

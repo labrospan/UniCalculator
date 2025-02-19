@@ -10,7 +10,7 @@ function updateMode(){
     labInput.value = "";
     theory_per.value = "";
     lab_per.value = "";
-    resultText.textContent  ="";
+    resultText.textContent  ="Required Grade: ";
     resultBox.style.color = "black";
 
     // Enable -- Disable mode
@@ -57,6 +57,15 @@ function calculate(){
         resultText.textContent = "Abord Mission!";
         resultText.style.color = "black";
     }
+
+}
+
+function reset(){
+    document.getElementById("theory_per").value = "";
+    document.getElementById("lab_per").value = "";
+    document.getElementById("lab_grd").value = "";
+    document.getElementById("theory_grd").value = "";
+    document.getElementById("resultTxt").textContent = "Required Grade: ";
 
 }
 
