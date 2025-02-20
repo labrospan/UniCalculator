@@ -7,6 +7,7 @@
         <link rel = "stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="icon" type="image/webp" href="logo4.webp">
+        <link rel="infosheet" href="info.html">
     </head>
     <body>
         <div class = "header">
@@ -44,11 +45,14 @@
             </div>
             
             <div class="grd_row">
-                <label class="labgrd" for = "lab_grd">Lab Grade: </label>
-                <input class="labgrdbox" type ="number" id = "lab_grd" min = "0" max = "10"  disabled>
-        
-                <label class="theorygrd" for = "theory_grd">Theory Grade: </label>
-                <input class="theorygrdbox" type ="number" id = "theory_grd" min = "0" max ="10"  disabled>
+                <div class="grade_cont">
+                    <label class="labgrd" for = "lab_grd">Lab Grade: </label>
+                    <input class="labgrdbox" type ="number" id = "lab_grd" min = "0" max = "10"  disabled>
+                </div>
+                <div class="grade_cont">
+                    <label class="theorygrd" for = "theory_grd">Theory Grade: </label>
+                    <input class="theorygrdbox" type ="number" id = "theory_grd" min = "0" max ="10"  disabled>
+                </div>
             </div>
             
             <div class="button_row">
@@ -62,6 +66,14 @@
                 <p id="resultTxt">Required Grade:</p>
             </div>
         </div>
+        </div>
+
+        <div class = footer>
+            <p class="copy">&copy; Labros Panagiotopoulos, Athens 2025, Greece</p>
+            <div class="tooltip">
+                <button class="info" id="info" onclick="info()">?</button>
+                <span class="info_txt">More info!</span>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

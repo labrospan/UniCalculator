@@ -98,4 +98,8 @@ document.getElementById("lab_per").addEventListener("input", debounce(function()
     }
 }, 200));
 
+function info(){
+    window.location.href = "info.html";
+}
+
 

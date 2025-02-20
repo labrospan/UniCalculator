@@ -36,13 +36,14 @@ input, button, select{
     font-size: 1.25em;
 
     /* Every screen*/
-    max-width: 50%;
+    max-width: 52%;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     line-height: 1.2;
 }
 
@@ -80,7 +81,8 @@ input[type="number"]::-webkit-outer-spin-button{
 .selecttxt{
     font-size: 30px;
     color: black;
-    margin-left: 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .selectbox{
@@ -99,15 +101,12 @@ input[type="number"]::-webkit-outer-spin-button{
     display: flex;
     justify-content: space-between;
     align-items: center; /*Align elements vertically*/
-    gap: 10px; /*Space between elements*/
-    margin-bottom: 12px; /*Space betweem rows*/
-    margin-top: -10px;
-    margin-left: 19px;
+    margin-top: -27px;
     font-size: 1.08em;
-
+    margin-right: 27px;
     /* Every screen */
     flex-wrap: nowrap;
-    width: 100%;
+    width: 80%;
 }
 
 .input_row label{
@@ -115,50 +114,62 @@ input[type="number"]::-webkit-outer-spin-button{
     text-align: center;    
     color: black;
     block-size: 0.88cm;
+    margin: 30px;
+    margin-right: 8px;
 }
 
 .input_row input{  
     flex: 2;
     font-size: 1.03em;
-    block-size: 0.4cm;
-    margin-right: 30px;
+    block-size: 0.78cm;
 }
 
 
 .theoryper{
-    margin-right:119px;
+    margin-right:auto;
+    margin-right: auto;
     font-size: 1.2em;
 }
 
 .theoryperbox{
     text-align: center;
-    margin-left: -115px;
     border-radius: 5px;
     border: 2px solid rgb(0, 0, 0);
-    padding: 4px;
 }
 
-.labper{
+.labper {
     font-size: 1.2em;
-    margin-right: 4px;
 }
 
 .labperbox{
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
-    padding: 4px;
     text-align: center;
 }
 
 .grd_row{
-    display:inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 1.2em;
-    text-align: left;
+    justify-content: center;
+    gap: 5px;
+    width: 75%;
+    margin-left: 90px;
+    margin-bottom: 15px;
+}
+
+.grade_cont{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 75%;
+    gap: 10px;
     
 }
 
 .grd_row input{
-    block-size: 0.6cm;
+    block-size: 0.78cm;
     font-size: 0.9em;
     text-align: center;
     border: 2px solid black;
@@ -167,30 +178,22 @@ input[type="number"]::-webkit-outer-spin-button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.labgrd{
-    margin-left: 37.5px;
     
 }
-
-.labgrdbox{
-    width:80%;
-    max-width: 200px;
-    text-align: center;
+.labgrd{
+    white-space: nowrap;
+    
+    text-align: left;
+    margin-right: 24px;
 }
 
 .theorygrd{
-    margin-left: 10px;
+    width: 100px;
+    text-align: left;
+    margin-right: 30px;
+    white-space: nowrap;
+    
 }
-.theorygrdbox{
-    width:80%;
-    max-width: 200px;
-    text-align: center;
-}
-
 
 button{
     background-color: #332d2d;
@@ -212,17 +215,15 @@ button:hover{
 
 .btn:active{
     transform: scale(1.05);
-    transition: transform 0.0.s ease-in-out
+    transition: transform 0.1s ease-in-out
 }
 
 .reset{
-    width: 15%;
-    border-radius:43%;
     margin-left: 20px;
 }
 
 .reset:active {
-    transform: rotate(180deg);
+    transform: scale(1.05);
     transition: transform 0.1s ease-in-out;
 }
 
@@ -250,10 +251,11 @@ select{
 
 .result-box{
     font-size: 1.35em;
-    
+    margin-top: 15px;
     /*every screen*/
     word-wrap: break-word;
     text-align: center;
+    font-weight: bolder;
 }
 
 /*FOR THE % */
@@ -271,12 +273,12 @@ select{
 /* Style the percentage symbol */
 .input-container span {
     position: absolute;
-    right: 38px;
+    right: 10px;
     font-size: 1.05em;
     color: rgb(0, 0, 0);
     pointer-events: none; /* Prevent interaction */
-    top: 40%; /* mOve the % to the middle*/
-    transform: translateY(-50%); /* Ensure perfect vertical aligment*/
+    top: 45%; /* mOve the % to the middle*/
+    transform: translateY(-60%); /* Ensure perfect vertical aligment*/
 }
 
 /* Style the input field */
@@ -288,8 +290,86 @@ select{
     padding: 10px;
 }
 
+.footer{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30%;
+}
 
-@media screen and (max-width: 600) {
+.copy{
+    color: white;
+    width: 100%;
+    font-size: small;
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    margin-left: 1%;
+    margin-top: 22px;
+}
+
+.info{
+    background-color: rgba(255, 255, 255, 0.897);
+    color: #fd6500;
+    border: 2px #fd6500 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 25%;
+    width: 3.6%;
+    margin-right: 4%;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.info:hover{
+    background-color: #fd6500;
+    color: white;
+    border: 2px #fff solid;
+}
+
+/*info msg*/
+.tooltip{
+    position: relative;
+    display: inline-block;
+    
+}
+.tooltip .info_txt{
+   visibility: hidden;
+    width: 80px;
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px;
+    border-radius: 9px;
+    
+    /*position msg*/
+    position: absolute;
+    bottom: 150%;
+    left: 40%;
+    transform: translateX(-50%);
+
+    /*Animation*/
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.tooltip:hover .info_txt{
+    visibility: visible;
+    opacity: 5;
+}
+
+
+
+
+@media screen and (min-width: 600) {
     .button_row{
         flex-direction: column;
         align-items: center;
